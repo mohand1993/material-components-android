@@ -30,7 +30,12 @@ class CardViewTabLayoutActivity : CardViewActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        tabLayout = findViewById(R.id.tabs)
+        aa(R.id.tabs)
+        aa(R.id.tabs2)
+    }
+
+    private fun aa(x: Int) {
+        tabLayout = findViewById(x)
         TabLayoutMediator(tabLayout, viewPager) { tab, position ->
             tab.text = Card.DECK[position].toString()
         }.attach()

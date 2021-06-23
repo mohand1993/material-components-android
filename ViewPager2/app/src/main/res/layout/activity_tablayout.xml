@@ -24,11 +24,25 @@
 
     <include layout="@layout/controls" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabs"
-        android:layout_width="match_parent"
+        app:tabTextAppearance="@style/ta"
+        android:layout_weight="1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:tabMode="scrollable" />
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabs2"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:tabMode="scrollable" />
+    </LinearLayout>
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
